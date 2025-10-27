@@ -8,7 +8,7 @@ const connectDB =  async() => {
     }
 
     try {
-        await mongoose.connect('mongodb://localhost:27017/', {
+        await mongoose.connect(process.env.MONGODB, {
             dbName: "Modex"
         })
         isConnected = true;
