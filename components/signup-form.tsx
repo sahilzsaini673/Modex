@@ -23,7 +23,7 @@ export function SignUpForm({className, ...props}: React.ComponentProps<"form">) 
   const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
 
-    setLoading(true);
+    
 
     if(form.password != password) {
       toast.error("password does not match");
@@ -31,6 +31,7 @@ export function SignUpForm({className, ...props}: React.ComponentProps<"form">) 
     }
 
     try{
+      setLoading(true);
       const res = await axios.post('/api/newUser', form);
       if(res.data.success) {
         localStorage.setItem('email', form.email);
