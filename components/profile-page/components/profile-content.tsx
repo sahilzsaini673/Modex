@@ -112,7 +112,7 @@ export default function ProfileContent() {
 
   return (
     <div className="">
-      <Toaster />
+  
       <Tabs defaultValue="personal" value={tab} onValueChange={setTab} className="space-y-6">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="personal">Personal Info</TabsTrigger>
