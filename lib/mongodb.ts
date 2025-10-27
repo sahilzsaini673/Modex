@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 
 let isConnected = false;
 
+
 const connectDB =  async() => {
     if(isConnected) {
         return;
